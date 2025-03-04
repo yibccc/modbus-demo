@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+# MQTT配置
+mqtt:
+  host: tcp://<your IP>:1883
+  username: admin  # 用户名
+  password: pwd # 密码
+  clientId: server_${random.int} # 客户端ID,添加随机数防止重复
+  timeout: 10 # 超时时间
+  keepalive: 20 # 保持连接时间
+  topic: sky/test/# # 订阅的主题,#表示通配符
+
